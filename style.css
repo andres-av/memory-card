@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #F5E6CC;
+    font-size: 1.3rem;
+    background-color: #04151F;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(90%, 800px);
+    margin: 0 auto;
+    margin-block: 4rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.story-part__text__title {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.story-part__text__paragraph--accent{
+    color: #F0544F;
+    font-weight: 700;
+}
+.start-game{
+    background-color: #407899;
+    color: #F5E6CC;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.start-game__text {
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+}
+
+.fa-arrow-down {
+    font-size: 1.5rem;
+}
+
+.start-game:hover , .down-arrow:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+.start-game:active > .start-game__text , .down-arrow:active{
+    color: #04151F;
+}
+
+@media (min-width: 800px) {
+    .container {
+        width: min(90%, 1200px);
+    }
+    .game-title {
+        font-size: 10rem;
+    }
+    .story-part {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        margin-block: 10rem;
+    }
+    .story-part__text{
+        width: 60%;
+    }
+    .story-part--inverted{
+        flex-direction: row-reverse;
+    }
+    .start-game__text {
+        font-size: 3.5rem;
+        margin-inline: 0.5rem;
+    }
+    .fa-arrow-down {
+        font-size: 4rem;
+    }
+}
