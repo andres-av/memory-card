@@ -1,0 +1,160 @@
+/* General Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: var(--text);
+    color: var(--champagne);
+    font-size: 1.3rem;
+    background: var(--rich-black);
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: min(90%, 800px);
+    margin: 0 auto;
+    margin-block: 2rem;
+}
+/* End of General Styles */
+
+/* Header */
+.header__back {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header__back__title {
+    margin-block: 0;
+    font-weight: 300;
+    color: var(--champagne-transp);
+}
+
+.header__back__arrow {
+    background-color: var(--cerulean);
+    color: var(--champagne);
+    border-radius: 100px;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+/* End of Header */
+
+/* Difficulty Levels */
+.card {
+    width: 300px;
+}
+
+.card__content {
+    text-align: center;
+    position: relative;
+    padding: 10em 4em;
+    transition: transform 2.5s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+    transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+}
+
+.card__front {
+    background-image: url('../../assets/easy/easy-bg-1.jpeg');
+    background-size: cover;
+    border-radius: 25px;
+    color: var(--champagne);
+}
+
+.card__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 0.8em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    transform: var(--level-one);
+    background: var(--rich-black-transp);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+.card__title {
+    font-family: var(--title);
+    font-size: 1.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card__subtitle {
+    transform: var(--level-two);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 300;
+    opacity: .7;
+}
+
+.card__body {
+    transform: var(--level-two);
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.card__back {
+    border-radius: 25px;
+    transform: rotateY(.5turn);
+    background-image: url('../../assets/general/virus.jpeg');
+    background-size: cover;
+}
+
+.card__back::before {
+    content: '';
+    position: absolute;
+    --spacer: 0.8em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    transform: var(--level-one);
+    background: var(--rich-black-transp);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.card_btn {
+    background-color: var(--cerulean);
+    text-decoration: none;
+    border-radius: 100px;
+    color: var(--champagne);
+    padding: 0.8rem 1.2rem;
+    transform: var(--level-two);
+    text-transform: uppercase;
+    font-family: var(--remember-us)
+}
+/* End of Difficulty Levels */

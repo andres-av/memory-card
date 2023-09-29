@@ -1,0 +1,23 @@
+/* Variables */
+:root {
+    /* Colors */
+    --rich-black: rgb(4, 21, 31);
+    --champagne: rgb(245, 230, 204);
+    --vermilion: rgb(240, 84, 79);
+    --cerulean: rgb(64, 120, 153);
+
+    /* opacity */
+    --rich-black-transp: rgba(4, 21, 31, 0.3);
+    --champagne-transp: rgba(245, 230, 204, 0.7);
+
+    /* Z index */
+    --level-one: translateZ(2rem);
+    --level-two: translateZ(5rem);
+    --level-three: translateZ(8rem);
+
+    /* Fonts */
+    --text: 'Montserrat', sans-serif;
+    --title: 'Oswald', sans-serif;
+    --remember-us: 'Titillium Web', sans-serif;
+}  
+/* End of Variables */
