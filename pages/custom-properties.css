@@ -19,5 +19,10 @@
     --text: 'Montserrat', sans-serif;
     --title: 'Oswald', sans-serif;
     --remember-us: 'Titillium Web', sans-serif;
+
+    /* Difficulty levels imgs */
+    --easy: url('../../assets/easy/easy-bg-1.jpeg');
+    --medium: url('../../assets/medium/medium-bg-1.jpeg');
+    --hard: url('../../assets/hard/hard-bg-2.jpeg');
 }  
 /* End of Variables */

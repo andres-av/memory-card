@@ -15,7 +15,7 @@ img {
 }
 
 .container {
-    width: min(90%, 800px);
+    width: min(90%, 1000px);
     margin: 0 auto;
     margin-block: 2rem;
 }
@@ -45,8 +45,16 @@ img {
 /* End of Header */
 
 /* Difficulty Levels */
+.levels__title {
+    font-family: var(--remember-us);
+    color: var(--vermilion);
+    text-transform: uppercase;
+    text-align: center;
+}
 .card {
     width: 300px;
+    margin: 0 auto;
+    margin-block: 3rem;
 }
 
 .card__content {
@@ -73,13 +81,23 @@ img {
     transform-style: preserve-3d;
     display: grid;
     align-content: center;
-}
-
-.card__front {
-    background-image: url('../../assets/easy/easy-bg-1.jpeg');
-    background-size: cover;
     border-radius: 25px;
     color: var(--champagne);
+}
+
+.card__front--easy {
+    background-image: var(--easy);
+    background-size: cover;
+}
+
+.card__front--medium {
+    background-image: var(--medium);
+    background-size: cover;
+}
+
+.card__front--hard {
+    background-image: var(--hard);
+    background-size: cover;
 }
 
 .card__front::before {
@@ -94,8 +112,8 @@ img {
     background: var(--rich-black-transp);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
 .card__title {
@@ -125,7 +143,6 @@ img {
 }
 
 .card__back {
-    border-radius: 25px;
     transform: rotateY(.5turn);
     background-image: url('../../assets/general/virus.jpeg');
     background-size: cover;
@@ -158,3 +175,67 @@ img {
     font-family: var(--remember-us)
 }
 /* End of Difficulty Levels */
+
+/* Instructions */
+.instructions {
+    text-align: center;
+}
+.instructions__title{
+    font-family: var(--remember-us);
+    color: var(--vermilion);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 6rem;
+}
+.instructions__subtitle {
+    font-family: var(--title);
+    color: var(--cerulean);
+    text-transform: uppercase;
+}
+.instructions__list {
+    list-style: none;
+}
+.instructions__list > span {
+    color: var(--vermilion);
+    text-transform: uppercase;
+}
+.instructtions__col1 > ul {
+    text-align: left;
+}
+.instructions___col2 {
+    max-width: 500px;
+    margin: 0 auto;
+}
+/* End of Instructions */
+
+@media (min-width: 900px) {
+    /* Difficulty Levels */
+    .card__container {
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .card {
+        width: 300px;
+        margin: 0;
+    }
+    /* End of Difficulty Levels */
+
+    /* Instructions */
+    .instructions {
+        display: flex;
+        text-align: left;
+        gap: 5rem;
+    }
+    .instructtions__col1 {
+        width: 100%;
+    }
+    .instructtions__col1 > ul {
+        padding-left: 0;
+    }
+    .instructtions__col2 {
+        width: 30%;
+    }
+    /* End of Instructions */
+}

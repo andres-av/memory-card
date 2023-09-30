@@ -140,7 +140,7 @@ header {
 @media (min-width: 800px) {
     /* General Styles */
     .container {
-        width: min(90%, 1500px);
+        width: min(90%, 1200px);
     }
     /* End of General Styles */
 

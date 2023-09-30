@@ -24,12 +24,13 @@
         </div>
     </header>
 
-    <section class="container">
+    <h2 class="levels__title">Choose Your Level</h2>
+    <section class="card__container">
 
         <div class="card">
             <div class="card__content">
 
-                <div class="card__front">
+                <div class="card__front card__front--easy">
                     <div class="card__title">Prehistoric Era</div>
                     <div class="card__subtitle">Easy</div>
                 </div>
@@ -41,32 +42,57 @@
             </div>
         </div>
 
-        <div class="levels">
-            <p>Prehistoric Era (Easy)</p>
-            <p>Middle Ages (Medium)</p>
-            <p>Last Century(Hard)</p>
+        <div class="card">
+            <div class="card__content">
+
+                <div class="card__front card__front--medium">
+                    <div class="card__title">Middle Ages</div>
+                    <div class="card__subtitle">Medium</div>
+                </div>
+
+                <div class="card__back">
+                    <a class="card_btn" href="">Start Game</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__content">
+
+                <div class="card__front card__front--hard">
+                    <div class="card__title">The Last Century</div>
+                    <div class="card__subtitle">Hard</div>
+                </div>
+
+                <div class="card__back">
+                    <a class="card_btn" href="">Start Game</a>
+                </div>
+
+            </div>
         </div>
     </section>
+
+
     <section class="container">
+        <h2 class="instructions__title">How To Play</h2>
         <div class="instructions">
-            <h2>How To Play</h2>
-            <h3>Select Your Difficulty</h3>
-            <p>Choose your level of difficulty to begin your journey:</p>
-            
-            <ul>
-                <li>Easy: Prehistoric Era</li>
-                <li>Medium: Middle Ages</li>
-                <li>Hard: The Last Century</li>
-            </ul>
-            <h3>Match the Pairs</h3>
-            <p>Click on two cards to reveal their contents. Your goal is to find pairs that contain the same ability, discovery or
-                invention.</p>
-            <h3>Complete the Level</h3>
-            <p>Continue matching pairs until you've successfully paired all the cards on the grid. Each successful match brings us
-                one step closer to safeguarding our collective wisdom.</p>
-            <h3>Remember</h3>
-            <p>Time is of the essence. The amnesia virus threatens to erase our past. Your sharp memory and quick thinking are our
-                only hope. The world is counting on you to be the savior of knowledge and heritage.</p>
+            <div class="instructtions__col1">
+                <h3 class="instructions__subtitle">Select Your Difficulty</h3>                
+                <ul>
+                    <li class="instructions__list"><span>Easy:</span> Prehistoric Era</li>
+                    <li class="instructions__list"><span>Medium:</span> Middle Ages</li>
+                    <li class="instructions__list"><span>Hard:</span> The Last Century</li>
+                </ul>
+            </div>
+            <div class="instructions___col2">
+                <h3 class="instructions__subtitle">Match the Pairs</h3>
+                <p class="instructions__text">Click on two cards to reveal their contents. Your goal is to find pairs that contain the same image.</p>
+                <h3 class="instructions__subtitle">Complete the Level</h3>
+                <p class="instructions__text">Continue matching pairs until you've successfully paired all the cards on the grid.</p>
+                <h3 class="instructions__subtitle">Remember</h3>
+                <p class="instructions__text">Time is of the essence. The amnesia virus threatens to erase our past. The world is counting on you to be the savior of knowledge and heritage.</p>
+            </div>
         </div>
 
     </section>
