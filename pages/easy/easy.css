@@ -1,0 +1,204 @@
+/* General Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: var(--text);
+    color: var(--champagne);
+    font-size: 1.3rem;
+    background: var(--rich-black);
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: min(90%, 1000px);
+    margin: 0 auto;
+    margin-block: 2rem;
+}
+/* End of General Styles */
+/* Header */
+.header__back {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header__back__title {
+    margin-block: 0;
+    font-weight: 300;
+    color: var(--champagne-transp);
+}
+
+.header__back__arrow {
+    background-color: var(--cerulean);
+    color: var(--champagne);
+    border-radius: 100px;
+    padding: 0.5rem 0.5rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+/* End of Header */
+
+/* Timer */
+.legend {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.timer, .reset {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.timer__title {
+    text-transform: uppercase;
+    font: var(--remember-us);
+    font-weight: 700;
+    color: var(--vermilion);
+    margin: 0;
+}
+.reset__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font: var(--title);
+    font-weight: 700;
+    background-color: var(--cerulean);
+    color: var(--champagne);
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+}
+.reset__btn:hover {
+    opacity: .7;
+}
+/* End of Timer */
+/* Gameboard */
+.gameboard {
+    background-image: url(../../assets/easy/easy-bg-1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(12vw, 1fr));
+    grid-template-rows: repeat(4, minmax(clamp(80px, 12vw, 180px), 1fr));  
+    gap: 5px;
+    padding: 1rem;
+
+}
+.gameboard::before {
+    content: '';
+    position: absolute;
+    --spacer: 0.5em;
+    border-radius: 16px;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    background: var(--rich-black-transp);
+  }
+  /* Cards */
+
+
+.card__content {
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.card__content:hover {
+    cursor: pointer;
+}
+
+.flipCard .card__content{
+    transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-block: 4%;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: end;
+    border-radius: 16px;
+    color: var(--champagne);
+    pointer-events: none;
+}
+
+.card__front {
+    background-image: url('../../assets/general/virus.jpeg');
+    background-size: cover;
+}
+
+.card__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 0.5em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid currentColor;
+    border-radius: 16px;
+    transform: var(--level-one);
+  }
+
+.card__back {
+    transform: rotateY(.5turn);
+    background-size: cover;
+    background-position: center;
+}
+
+.card__back::before {
+    content: '';
+    position: absolute;
+    --spacer: 2%;
+    top: 70%;
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    transform: var(--level-one);
+    background: var(--rich-black-transp);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.card__title {
+    font-family: var(--title);
+    font-size: 0.5rem;
+    transform: translateZ(4rem);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+}
+
+  /* End of Cards */
+/* End of GameBoard */
+/* Media Queries */
+@media (min-width: 800px) {
+    .card__title {
+        font-family: var(--title);
+        font-size: 1rem;
+        transform: translateZ(4rem);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+/* End of Media Queries */
