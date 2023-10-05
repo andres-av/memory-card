@@ -61,7 +61,7 @@ img {
     text-align: center;
     position: relative;
     padding: 10em 4em;
-    transition: transform 2.5s;
+    transition: transform 1.2s;
     transform-style: preserve-3d;
 }
 

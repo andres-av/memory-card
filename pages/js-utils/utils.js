@@ -74,7 +74,7 @@ const checkMatch = (e, array) => {
     }
 }
 
-let countdownTime = 60; 
+let countdownTime = 70; 
 let timerInterval;
 const timeElement = document.getElementById("timer__time");
 
@@ -89,7 +89,7 @@ export const restart = (array) => {
   generateCards(array)
 
   winProgress = 0;
-  countdownTime = 60
+  countdownTime = 70
 
 }
 
