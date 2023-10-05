@@ -26,3 +26,47 @@
     --hard: url('../../assets/hard/hard-bg-2.jpeg');
 }  
 /* End of Variables */
+
+/* Modals */
+
+  /* Style the modal content */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--rich-black-transp);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .modal__content {
+    background-color: var(--champagne);
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    color: var(--rich-black);
+    border-radius: 16px;
+  }
+
+  .modal__buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .modal__buttons > a{
+    text-decoration: none;
+    color: var(--champagne);
+    background-color: var(--cerulean);
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }

@@ -79,15 +79,15 @@ img {
 /* End of Timer */
 /* Gameboard */
 .gameboard {
-    background-image: url(../../assets/easy/easy-bg-1.jpeg);
+    background-image: url(../../assets/hard/hard-bg-2.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     border-radius: 25px;
 
     display: grid;
-    grid-template-columns: repeat(4, minmax(12vw, 1fr));
-    grid-template-rows: repeat(4, minmax(clamp(80px, 12vw, 180px), 1fr));  
+    grid-template-columns: repeat(5, minmax(12vw, 1fr));
+    grid-template-rows: repeat(6, minmax(clamp(80px, 12vw, 180px), 1fr));  
     gap: 5px;
     padding: 1rem;
 
@@ -191,7 +191,6 @@ img {
 
   /* End of Cards */
 /* End of GameBoard */
-
 /* Media Queries */
 @media (min-width: 800px) {
     .card__title {
@@ -200,6 +199,14 @@ img {
         transform: translateZ(4rem);
         text-transform: uppercase;
         font-weight: 700;
+    }
+    .gameboard {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10vw, 1fr));
+        grid-template-rows: repeat(5, minmax(clamp(80px, 12vw, 180px), 1fr));  
+        gap: 5px;
+        padding: 1rem;
+    
     }
 }
 /* End of Media Queries */
