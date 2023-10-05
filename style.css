@@ -110,7 +110,7 @@ header {
 .start-game__text {
     text-transform: uppercase;
     font-family: var(--remember-us);
-    margin: 0;
+    margin: 0 auto;
 }
 
 .start-game:hover{
